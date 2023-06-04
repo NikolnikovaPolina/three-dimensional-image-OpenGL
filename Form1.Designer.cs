@@ -1,4 +1,4 @@
-﻿namespace _3ebba
+namespace _3ebba
 {
     partial class Form1
     {
@@ -38,6 +38,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonLightUp = new System.Windows.Forms.Button();
             this.cone = new System.Windows.Forms.GroupBox();
+            this.trasparency = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.height = new System.Windows.Forms.NumericUpDown();
@@ -45,6 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.cone.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trasparency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.height)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radius)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +79,7 @@
             this.Y,
             this.Z,
             this.Цвет});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 168);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 231);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -131,7 +134,7 @@
             // buttonLightUp
             // 
             this.buttonLightUp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonLightUp.Location = new System.Drawing.Point(115, 399);
+            this.buttonLightUp.Location = new System.Drawing.Point(115, 462);
             this.buttonLightUp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLightUp.Name = "buttonLightUp";
             this.buttonLightUp.Size = new System.Drawing.Size(85, 28);
@@ -142,18 +145,54 @@
             // 
             // cone
             // 
+            this.cone.Controls.Add(this.trasparency);
+            this.cone.Controls.Add(this.label1);
             this.cone.Controls.Add(this.label5);
             this.cone.Controls.Add(this.label4);
             this.cone.Controls.Add(this.height);
             this.cone.Controls.Add(this.radius);
-            this.cone.Location = new System.Drawing.Point(13, 14);
+            this.cone.Location = new System.Drawing.Point(13, 13);
             this.cone.Margin = new System.Windows.Forms.Padding(4);
             this.cone.Name = "cone";
             this.cone.Padding = new System.Windows.Forms.Padding(4);
-            this.cone.Size = new System.Drawing.Size(187, 136);
+            this.cone.Size = new System.Drawing.Size(187, 193);
             this.cone.TabIndex = 11;
             this.cone.TabStop = false;
             this.cone.Text = "Конус";
+            // 
+            // trasparency
+            // 
+            this.trasparency.DecimalPlaces = 1;
+            this.trasparency.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.trasparency.Location = new System.Drawing.Point(12, 159);
+            this.trasparency.Margin = new System.Windows.Forms.Padding(4);
+            this.trasparency.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.trasparency.Name = "trasparency";
+            this.trasparency.Size = new System.Drawing.Size(160, 22);
+            this.trasparency.TabIndex = 10;
+            this.trasparency.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 139);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Прозрачность";
             // 
             // label5
             // 
@@ -238,6 +277,7 @@
             this.panel1.ResumeLayout(false);
             this.cone.ResumeLayout(false);
             this.cone.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trasparency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.height)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radius)).EndInit();
             this.ResumeLayout(false);
@@ -260,5 +300,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown height;
         private System.Windows.Forms.NumericUpDown radius;
+        private System.Windows.Forms.NumericUpDown trasparency;
+        private System.Windows.Forms.Label label1;
     }
 }
